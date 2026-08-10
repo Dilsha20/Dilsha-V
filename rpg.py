@@ -23,3 +23,25 @@
 #         enemy_damage=random.randint(5,15)
 #         player-=enemy_damage
 #         print(f"enemy attacked you and dealt {enemy_damage} damage")
+
+import random
+player=input("enter your name:---").lower()
+enemy=random.choice(["dragon","gobin","troll"])
+playerhp=100
+eneymyhp=100
+turn=1
+while playerhp>0 and eneymyhp>0:
+    print(f"Turn{turn}")
+    print(f"{enemy}attacks player")
+    playerhp=playerhp-random.randint(8,20)
+    print(F"PLAYER HP{playerhp}")
+    print(F"{player} strikes back")
+    eneymyhp=eneymyhp-random.randint(8,20)
+    print(f"eneymy hp{eneymyhp}")
+    turn=turn+1
+    if playerhp <=0:
+        print(f"{enemy}won")
+        break
+    elif eneymyhp <=0:
+        print(f"{playerhp}won")
+        break
